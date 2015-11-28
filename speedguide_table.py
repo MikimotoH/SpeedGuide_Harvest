@@ -99,6 +99,7 @@ def convertUserPassword(s:str)->str:
 
 def scrapeDetails(curUrl):
     global prevTrail
+    ulog('curUrl= '+curUrl)
     try:
         d= pq(curUrl)
         md = elmToMd(d('#content')[0],True,True)
@@ -164,6 +165,8 @@ def scrapeDetails(curUrl):
                         pass
                     else:
                         ipdb.set_trace()
+            else:
+                pass
             pr[n] = v
             if n== 'Default admin username':
                 default_user_name = convertUserPassword(v)
@@ -228,7 +231,7 @@ def pageWalker():
     try:
         curUrl = "http://www.speedguide.net/broadband-list.php"
         startIdx = getStartIdx()
-        for idx in range(0, startIdx+1):
+        for idx in range(0, startIdx):
             ulog('idx=%s'%idx); ulog('curUrl= '+curUrl)
             d = pq(url=curUrl)
             nextPage = d('img[alt^="Next page"]')[0]
@@ -241,7 +244,11 @@ def pageWalker():
             routerWalker(curUrl)
             prevTrail.pop()
             d = pq(url=curUrl)
-            nextPage = d('img[alt^="Next page"]')[0]
+            try:
+                nextPage = d('img[alt^="Next page"]')[0]
+            except IndexError:
+                ulog('Last page')
+                break
             curUrl = nextPage.getparent().attrib['href']
             curUrl = urlChangePath(d.base_url,curUrl)
     except Exception as ex:
