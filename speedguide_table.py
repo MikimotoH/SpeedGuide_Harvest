@@ -152,8 +152,9 @@ def scrapeDetails(curUrl):
                     v = re.search(r'<(.+?)>',v).group(1).strip()
                     # "<http://router.asus.com>"
                 elif v0 == '[':
-                    hreftitle = re.search(r'\((.+?)\)', v).group(1)
+                    hreftitle = re.search(r'\((.+?)(?<!\\)\)', v).group(1)
                     v = hreftitle.split()[0]
+                    v = v.replace('\\', '')
                 else:
                     """
                     'Transmit Power: |  +30 dBm'
