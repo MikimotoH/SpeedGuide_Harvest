@@ -31,6 +31,7 @@ Harvest Router information on SpeedGuide
 ## website tree hiearchy
 
 [speedguide tree hierarchy](speedguide_tree_hierarchy.png)
+<img src="https://raw.githubusercontent.com/MikimotoH/SpeedGuide_Harvest/master/speedguide_tree_hierarchy.png" />
 
 The tree trail can be denoted as `[1,0]`, `[1,3]` for the leaf node.
 
