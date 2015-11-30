@@ -27,3 +27,12 @@ Harvest Router information on SpeedGuide
 4. use [PyQuery](https://pypi.python.org/pypi/pyquery) as the JQuery on the python, use PyQuery to test CSS Selectors. The usage of PyQuery is very similar to JQuery.
 5. use [lxml](http://packages.ubuntu.com/trusty/python3-lxml) etree to convert PyQuery HTML Element to HTML source.
 6. use [html2text](https://pypi.python.org/pypi/html2text) to convert html to markdown text. The benefits of markdown is that you can preserve URL link or image, without the hassle of HTML tags.
+
+## website tree hiearchy
+
+[speedguide tree hierarchy](speedguide_tree_hierarchy.png)
+
+The tree trail can be denoted as `[1,0]`, `[1,3]` for the leaf node.
+
+
+
