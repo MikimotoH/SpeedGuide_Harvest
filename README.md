@@ -14,3 +14,11 @@ Harvest Router information on SpeedGuide
 - Step 7. because we want to enumerate all of the items, we check the parent element's tag name and class ('em.router'), we insert the parent's CSS before the item.
 
 
+## Introduction to: xShell, tmux, ipython3, PyQuery, html2text 
+[![How to use xShell, tmux, ipython3, PyQuery, html2text](speedguide_inpsector_02.png)](https://www.youtube.com/watch?v=LjRAGi7c1wM "How to use xShell, tmux, ipython3, PyQuery, html2text")
+1. Use xShell as your SSH Client, it is better than Putty because the text selection is smarter.
+2. use tmux when you log on to a Linux server/VPS. The benefits of using tmux is that you can restore your session anytime. Don't worry network disconnected unexpectedly.
+3. use ipython3 (ipython) as your interactive python shell, because it supports tab auto-completion, magic history.
+4. use PyQuery as the JQuery on the python, use PyQuery to test CSS Selectors. The usage of PyQuery is very similar to JQuery.
+5. use lxml etree to convert PyQuery HTML Element to HTML source.
+6. use html2text to convert html to markdown text. The benefits of markdown is that you can preserve URL link or image, without the hassle of HTML tags.
