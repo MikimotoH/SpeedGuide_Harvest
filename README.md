@@ -35,5 +35,18 @@ Harvest Router information on SpeedGuide
 
 The tree trail can be denoted as `[1,0]`, `[1,3]` for the leaf node.
 
+## Continuation
 
+Continue from page=36, routerItem=0
+Option `-u` meaning no buffering, directly write to stdout.
+Option `-m ipdb` meaning started with interactive python debugger (needs pip install)
+Unix `tee` will write output to console and file 'log\_speedguide\_table.txt'
+```sh
+python3 -u -m ipdb speedguide_table.py 36 | tee --append log_speedguide_table.txt 2>&1
+```
+
+Continue from page=58, routerItem=13
+```sh
+python3 -u -m ipdb speedguide_table.py 58, 13
+```
 
